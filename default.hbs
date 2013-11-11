@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+
+	{{! Enter your disqus_shortname! For more information vitis help.disqus.com/customer/portal/articles/466208-what-s-a-shortname- }}
+    <script type="text/javascript">
+    var disqus_shortname = ''; // required: replace example with your forum shortname
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+
+	{{! If you want to track your visitors with Piwik or Google Analytics, enter the corresponding code here. }}
+
+</head>
+<body class="{{body_class}}">
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    <footer class="site-footer">
+
+	<iframe src="http://duckduckgo.com/search.html?site=blog.raummaschine.de&prefill=Blog durchsuchen..." style="overflow:hidden;margin:0;padding:0;max-width:408px;width:auto;height:40px;" frameborder="0"></iframe>
+
+        <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+        <div class="inner">
+             <section class="copyright"><a href="/">{{@blog.title}}</a> | <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY SA</a></section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
+	     <section class="poweredby"><a href="http://uberspace.de"><img src="http://raummaschine.de/images/uberspace-logo.png" style="margin:5px" width="100px"></a></section>
+        </div>
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! FitVids for responsive Videos }}
+    <script type="text/javascript" src="/assets/js/libs/jquery.fitvids.js"></script>
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>
